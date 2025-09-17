@@ -35,12 +35,12 @@
         }
         
         .heart {
-    position: absolute;
-    font-size: 20px;
-    color: rgba(216, 27, 96, 0.4); /* Mayor opacidad */
-    animation: float 8s infinite ease-in-out;
-    z-index: -1;
-}
+            position: absolute;
+            font-size: 20px;
+            color: rgba(216, 27, 96, 0.4); /* Mayor opacidad */
+            animation: float 8s infinite ease-in-out;
+            z-index: -1;
+        }
         
         @keyframes float {
             0%, 100% {
@@ -76,32 +76,32 @@
         }
         
         .hero-content {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid rgba(246, 179, 220, 0.2);
-    max-width: 800px;
-    animation: fadeIn 2s ease;
-    position: relative;
-    z-index: 2;
-}
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(246, 179, 220, 0.2);
+            max-width: 800px;
+            animation: fadeIn 2s ease;
+            position: relative;
+            z-index: 2;
+        }
 
-h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: #ff4d94; /* Rosa más vibrante */
-}
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #ff4d94; /* Rosa más vibrante */
+        }
 
-.subtitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-style: italic;
-    color: #ffd700; /* Rosa más claro pero visible */
-}
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #ffd700; /* Rosa más claro pero visible */
+        }
         
         .nombre {
             font-family: 'Dancing Script', cursive;
@@ -260,38 +260,52 @@ h1 {
             letter-spacing: 1px;
         }
         
-        /* Formulario */
+        /* Formulario - MODIFICADO para una sola columna */
         .rsvp-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 20px;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #880e4f;
             font-weight: 500;
+            font-size: 1.1rem;
         }
         
         .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 1px solid #f8bbd0;
-            border-radius: 8px;
-            font-size: 1rem;
+            padding: 16px;
+            border: 2px solid #f8bbd0;
+            border-radius: 10px;
+            font-size: 1.05rem;
             font-family: 'Montserrat', sans-serif;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.8);
         }
         
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none;
             border-color: #d81b60;
-            box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1);
+            box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.15);
+            background-color: #fff;
+        }
+        
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d81b60' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            background-size: 18px;
+            padding-right: 50px;
         }
         
         .btn {
@@ -659,41 +673,41 @@ h1 {
         </section>
 
         <!-- Sección de Agradecimiento -->
-<section class="section">
-    <h2 class="section-title">Agradecimiento</h2>
-    <div class="thank-you-content" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
-        
-        <!-- Padres -->
-        <div class="thank-you-card" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center; padding: 30px; background: linear-gradient(135deg, #fff 0%, #fce4ec 100%); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);">
-            <div style="font-size: 4rem; color: #d81b60; margin-bottom: 20px;">
-                <i class="fas fa-heart"></i>
+        <section class="section">
+            <h2 class="section-title">Agradecimiento</h2>
+            <div class="thank-you-content" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 30px;">
+                
+                <!-- Padres -->
+                <div class="thank-you-card" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center; padding: 30px; background: linear-gradient(135deg, #fff 0%, #fce4ec 100%); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);">
+                    <div style="font-size: 4rem; color: #d81b60; margin-bottom: 20px;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 style="color: #d81b60; font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 25px;">A mis queridos padres</h3>
+                    <div style="font-family: 'Dancing Script', cursive; font-size: 2rem; line-height: 1.4;">
+                        <p style="font-weight: bold; margin: 15px 0;">Olinsser García Arce</p>
+                        <p style="font-weight: bold;">y</p>
+                        <p style="font-weight: bold; margin: 15px 0;">Diana Zuñiga Vargas</p>
+                    </div>
+                </div>
+                
+                <!-- Padrinos -->
+                <div class="thank-you-card" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center; padding: 30px; background: linear-gradient(135deg, #fff 0%, #fce4ec 100%); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);">
+                    <div style="font-size: 4rem; color: #d81b60; margin-bottom: 20px;">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 style="color: #d81b60; font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 25px;">A mis padrinos</h3>
+                    <div style="font-family: 'Dancing Script', cursive; font-size: 2rem; line-height: 1.4;">
+                        <p style="font-weight: bold; margin: 15px 0;">Manuel Zuñiga Escamilla</p>
+                        <p style="font-weight: bold;">y</p>
+                        <p style="font-weight: bold; margin: 15px 0;">Maria Guadalupe Vargas Jiménez</p>
+                    </div>
+                </div>
+                
             </div>
-            <h3 style="color: #d81b60; font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 25px;">A mis queridos padres</h3>
-            <div style="font-family: 'Dancing Script', cursive; font-size: 2rem; line-height: 1.4;">
-                <p style="font-weight: bold; margin: 15px 0;">Olinsser García Arce</p>
-                <p style="font-weight: bold;">y</p>
-                <p style="font-weight: bold; margin: 15px 0;">Diana Zuñiga Vargas</p>
-            </div>
-        </div>
-        
-        <!-- Padrinos -->
-        <div class="thank-you-card" style="flex: 1; min-width: 300px; max-width: 400px; text-align: center; padding: 30px; background: linear-gradient(135deg, #fff 0%, #fce4ec 100%); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);">
-            <div style="font-size: 4rem; color: #d81b60; margin-bottom: 20px;">
-                <i class="fas fa-hands-helping"></i>
-            </div>
-            <h3 style="color: #d81b60; font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 25px;">A mis padrinos</h3>
-            <div style="font-family: 'Dancing Script', cursive; font-size: 2rem; line-height: 1.4;">
-                <p style="font-weight: bold; margin: 15px 0;">Manuel Zuñiga Escamilla</p>
-                <p style="font-weight: bold;">y</p>
-                <p style="font-weight: bold; margin: 15px 0;">Guadalupe Vargas Jiménez</p>
-            </div>
-        </div>
-        
-    </div>
-    <p style="text-align: center; font-style: italic; margin-top: 40px; font-size: 1.4rem; color: #5e2b35; font-family: 'Dancing Script', cursive;">
-        Por su amor, apoyo y por hacer este día posible.
-    </p>
-</section>
+            <p style="text-align: center; font-style: italic; margin-top: 40px; font-size: 1.4rem; color: #5e2b35; font-family: 'Dancing Script', cursive;">
+                Por su amor, apoyo y por hacer este día posible.
+            </p>
+        </section>
 
         <!-- Detalles del Evento -->
         <section class="section">
@@ -712,7 +726,7 @@ h1 {
                     <i class="fas fa-glass-cheers"></i>
                     <h3>Recepción</h3>
                     <p>Salón Quinta Briones</p>
-                    <p>2:00 PM</p>
+                    <p>1:00 PM</p>
                     <a href="https://maps.app.goo.gl/pdNku38G7DEQyx9Z6" target="_blank" style="color: #d81b60; text-decoration: none; margin-top: 10px; display: inline-block;">
                         <i class="fas fa-map-marker-alt"></i> Ver ubicación
                     </a>
@@ -720,7 +734,7 @@ h1 {
                 <div class="detail-card animate">
                     <i class="fas fa-vest"></i>
                     <h3>Código de Vestimenta</h3>
-                    <p>Formal</p>
+                    <h2>Formal</h2>
 
                 </div>
                 <div class="detail-card animate">
@@ -749,10 +763,10 @@ h1 {
                     <img src="1.jpg" alt="Foto de Romina">
                 </div>
                 <div class="gallery-item">
-                    <img src="2.jpg" alt="Foto de Romina">
+                    <img src="3.jpg" alt="Foto de Romina">
                 </div>
                 <div class="gallery-item">
-                    <img src="3.jpg" alt="Foto de Romina">
+                    <img src="2.jpg" alt="Foto de Romina">
                 </div>
                 <div class="gallery-item">
                     <img src="4.jpg" alt="Foto de Romina">
@@ -760,36 +774,37 @@ h1 {
             </div>
         </section>
         
-       <!-- Confirmación -->
+        <!-- Confirmación - FORMULARIO MEJORADO -->
         <section class="section">
             <h2 class="section-title">Confirma tu Asistencia</h2>
             <form class="rsvp-form" id="confirmationForm">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" required placeholder="Escribe tu nombre">
+                    <input type="text" id="nombre" required placeholder="Escribe tu nombre completo">
                 </div>
                 <div class="form-group">
-                    <label for="invitados">¿Asistiré?*</label>
+                    <label for="invitados">¿Asistiré? *</label>
                     <select id="invitados" required>
-                        <option value="NO">No</option>
-                        <option value="Si">Sí</option>
-                        <option value="Selecciona" selected>Seleccionar opción</option>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="Si">Sí, con mucho gusto</option>
+                        <option value="No">Lamentablemente no podré asistir</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="evento">Evento al que asistirás *</label>
                     <select id="evento" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
                         <option value="ambos">Ambos eventos</option>
                         <option value="ceremonia">Solo ceremonia</option>
                         <option value="recepcion">Solo recepción</option>
                     </select>
                 </div>
-                <div class="form-group" style="grid-column: span 2;">
-                    <label for="mensaje">Mensaje (opcional)</label>
-                    <textarea id="mensaje" rows="3" placeholder="Escribe un mensaje para la quinceañera"></textarea>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje para Romina (opcional)</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe un mensaje especial para la quinceañera..."></textarea>
                 </div>
+                <button class="btn" id="confirmBtn">Confirmar Asistencia</button>
             </form>
-            <button class="btn" id="confirmBtn">Confirmar Asistencia</button>
             <div style="text-align: center; margin-top: 20px;">
                 <p>¡Prepárate para la fiesta del año! ¡Mis 15 años!</p>
             </div>
@@ -830,14 +845,14 @@ h1 {
         setInterval(updateCountdown, 1000);
         updateCountdown();
         
-        // Manejo del formulario y envío por WhatsApp
+        // Manejo del formulario y envío por WhatsApp - NÚMERO CORREGIDO
         document.getElementById('confirmBtn').addEventListener('click', function() {
             const nombre = document.getElementById('nombre').value;
             const invitados = document.getElementById('invitados');
             const evento = document.getElementById('evento');
             const mensaje = document.getElementById('mensaje').value;
             
-            if (!nombre) {
+            if (!nombre || !invitados.value || !evento.value) {
                 alert('Por favor, completa los campos obligatorios (*)');
                 return;
             }
@@ -848,8 +863,8 @@ h1 {
             
             const texto = `Hola, quiero confirmar mi asistencia a los XV de Romina:%0A%0A*Nombre:* ${nombre}%0A*Asistiré:* ${invitadosTexto}%0A*Evento:* ${eventoTexto}%0A*Mensaje:* ${mensaje || 'Ninguno'}`;
             
-            // Abrir WhatsApp con el mensaje predefinido
-            window.open(`https://wa.me/522283558680?text=${texto}`, '_blank');
+            // Abrir WhatsApp con el mensaje predefinido - NÚMERO CORREGIDO A 2283558690
+            window.open(`https://wa.me/522283558690?text=${texto}`, '_blank');
             
             // Mostrar mensaje de confirmación
             alert('¡Gracias por confirmar tu asistencia! Se abrirá WhatsApp para enviar tu confirmación.');
